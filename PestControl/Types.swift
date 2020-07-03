@@ -22,6 +22,7 @@ struct PhysicsCategory {
   static let Bug: UInt32 = 0b100
   static let Firebug: UInt32 = 0b1000
   static let Breakable: UInt32 = 0b10000
+  static let Washable: UInt32 = 0b100000
 }
 
 enum GameState: Int {

@@ -70,6 +70,7 @@ class Bug: SKSpriteNode {
     
     run(SKAction.sequence([SKAction.fadeOut(withDuration: 3),
                              SKAction.removeFromParent()]))
+    
 
   }
   

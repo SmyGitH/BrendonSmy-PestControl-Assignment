@@ -263,6 +263,31 @@ func setupObstaclePhysics() {
             }
          }
       }
+  func setupWashableTilePhysics() {
+    guard let washableTileMap = background else { return }
+    // 1
+    for row in 0..<washableTileMap.numberOfRows {
+      for column in 0..<washableTileMap.numberOfColumns {
+        // 2
+        guard let tile = tile(in: washableTileMap,
+                              at: (column, row))
+          else { continue }
+        guard tile.userData?.object(forKey: "washable") != nil
+                else { continue }
+              // 3
+              let node = SKNode()
+              node.physicsBody = SKPhysicsBody(rectangleOf: tile.size)
+              node.physicsBody?.isDynamic = false
+              node.physicsBody?.friction = 0
+              node.physicsBody?.categoryBitMask =
+                PhysicsCategory.Washable
+
+              node.position = washableTileMap.centerOfTile(
+                atColumn: column, row: row)
+              washableTileMap.addChild(node)
+          }
+       }
+  }
   
   func tileGroupForName(tileSet: SKTileSet, name: String) -> SKTileGroup?{
     let tileGroup = tileSet.tileGroups.filter{$0.name == name}.first
@@ -352,7 +377,6 @@ extension GameScene: SKPhysicsContactDelegate{
     bug.removeFromParent()
     background.addChild(bug)
     bug.die()
-    normalBugCount -= 1
   }
   
   func didBegin(_ contact: SKPhysicsContact) {
@@ -364,6 +388,7 @@ extension GameScene: SKPhysicsContactDelegate{
     case PhysicsCategory.Bug:
       if let bug = other.node as? Bug {
         remove(bug: bug)
+        normalBugCount -= 1
       }
       
     case PhysicsCategory.Firebug:
@@ -378,6 +403,10 @@ extension GameScene: SKPhysicsContactDelegate{
       if let obstacleNode = other.node {
         advanceBreakableTile(locatedAt: obstacleNode.position)
         obstacleNode.removeFromParent()
+      }
+    case PhysicsCategory.Washable:
+      if player.hasBugspray {
+          player.hasBugspray = false
       }
     default:
       break

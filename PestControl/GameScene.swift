@@ -129,6 +129,7 @@ class GameScene: SKScene {
       setupWorldPhysics()
       createBugs()
       setupObstaclePhysics()
+      setupWashableTilePhysics()
       if fireBugCount > 0 {
         createBugspray(quantity: fireBugCount + 10)
       }
@@ -223,6 +224,8 @@ class GameScene: SKScene {
         if tile.userData?.object(forKey: "firebug") != nil {
           bug = Firebug()
           fireBugCount += 1
+        }else if tile.userData?.object(forKey: "waterbug") != nil {
+          bug = Waterbug()
         }else{
           bug = Bug()
           normalBugCount += 1
@@ -330,6 +333,7 @@ func setupObstaclePhysics() {
     }
     
     bugsprayTileMap?.name = "Bugspray"
+    
     addChild(bugsprayTileMap!)
   }
   
@@ -405,9 +409,12 @@ extension GameScene: SKPhysicsContactDelegate{
         obstacleNode.removeFromParent()
       }
     case PhysicsCategory.Washable:
-      if player.hasBugspray {
-          player.hasBugspray = false
-      }
+        if other.node != nil {
+          if player.hasBugspray {
+              player.hasBugspray = false
+          }
+        }
+      
     default:
       break
     }

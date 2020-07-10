@@ -30,6 +30,7 @@ class HUD: SKNode {
   
   var timerLabel: SKLabelNode?
   var bugCounter: SKLabelNode?
+  var elementCounter: SKLabelNode?
   
   
   override init(){
@@ -113,6 +114,7 @@ class HUD: SKNode {
     label.fontSize = fontSize
     label.position = position
   }
+
   
   func updateTimer(time: Int){
     let minutes = (time/60) % 60
@@ -153,6 +155,17 @@ class HUD: SKNode {
     
     updateCounter(bug: bug)
     
+  }
+  
+  func addElementCounter(element: SKTexture){
+    guard let scene = scene else {return}
+    
+    let position = CGPoint(x: -200, y: scene.frame.height / 2)
+    add(message: "Elements", position: position, fontSize: 24)
+    elementCounter = childNode(withName: "ElementCounter") as? SKLabelNode
+    elementCounter?.verticalAlignmentMode = .top
+    elementCounter?.fontName = "Menlo"
     
   }
+  
 }

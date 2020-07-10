@@ -19,8 +19,10 @@ class Megabug: Bug {
   override init() {
     super.init()
     name = "Megabug"
-    color = .white
+    color = .magenta
     colorBlendFactor = 1
+    xScale = 10
+    yScale = 10
     physicsBody?.categoryBitMask = PhysicsCategory.Megabug
   }
 }

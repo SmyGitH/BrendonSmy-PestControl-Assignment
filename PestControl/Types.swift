@@ -29,6 +29,7 @@ struct PhysicsCategory {
   static let Thunderbug: UInt32 = 0b1000000000
   static let Megabug: UInt32 = 0b10000000000
   static let Zappable: UInt32 = 0b100000000000
+  static let Choppable: UInt32 = 0b1000000000000
 }
 
 enum GameState: Int {

@@ -21,6 +21,8 @@ class Rockbug: Bug {
     name = "Rockbug"
     color = .darkGray
     colorBlendFactor = 1
+    xScale = 2
+    yScale = 2
     physicsBody?.categoryBitMask = PhysicsCategory.Rockbug
   }
 }

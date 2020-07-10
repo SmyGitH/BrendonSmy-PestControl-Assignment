@@ -21,6 +21,7 @@ class Thunderbug: Bug {
     name = "Thunderbug"
     color = .orange
     colorBlendFactor = 1
+    physicsBody?.velocity = CGVector(dx: 10, dy: 10)
     physicsBody?.categoryBitMask = PhysicsCategory.Thunderbug
   }
 }

@@ -56,6 +56,7 @@ class GameScene: SKScene {
   var timeLimit: Int = 10
   var elapsedTime: Int = 0
   var startTime: Int?
+  var megaTime: Double = 0
   
   var currentLevel: Int = 1
   
@@ -114,12 +115,17 @@ class GameScene: SKScene {
   
     hud.updateCounter(bug: fireBugCount + normalBugCount + waterBugCount + grassBugCount + rockBugCount + thunderBugCount + megaBugCount)
     
+    if player.hasFireElement{
+       hud.addElementCounter(element: SKTexture(pixelImageNamed: "flame"))
+    }
+    
   }
   
   func setupHud(){
     camera?.addChild(hud)
     hud.addTimer(time: timeLimit)
     hud.addCounter(bug: fireBugCount + normalBugCount + waterBugCount + grassBugCount + rockBugCount + thunderBugCount + megaBugCount)
+    
   }
   
   func checkEndGame(){
@@ -141,22 +147,16 @@ class GameScene: SKScene {
       setupObstaclePhysics()
       setupWashableTilePhysics()
       setupZapTilePhysics()
+      setupChoppableTilePhysics()
       
       
-      if normalBugCount > 0 {
-        createBugspray(quantity: normalBugCount)
+      if normalBugCount > 0 || megaBugCount > 0 {
+        createBugspray(quantity: 30)
       }
       
-      if fireBugCount > 0 {
+      if fireBugCount > 0 || megaBugCount > 0 {
         createFireElement(quantity: 100)
       }
-      
-      if player.hasThunderElement && player.hasWaterElement && player.hasGrassElement && player.hasFireElement && player.hasRockElement {
-        
-        player.hasEveryElement = true
-        
-      }
-      
     
       setupHud()
       gameState = .start
@@ -330,6 +330,32 @@ func setupObstaclePhysics() {
             }
   }
   
+  func setupChoppableTilePhysics(){
+    guard let obstaclesTileMap = obstaclesTileMap else { return }
+    // 1
+    for row in 0..<obstaclesTileMap.numberOfRows {
+      for column in 0..<obstaclesTileMap.numberOfColumns {
+        // 2
+        guard let tile = tile(in: obstaclesTileMap,
+                              at: (column, row))
+          else { continue }
+        guard tile.userData?.object(forKey: "choppable") != nil
+                else { continue }
+              // 3
+              let node = SKNode()
+              node.physicsBody = SKPhysicsBody(rectangleOf: tile.size)
+              node.physicsBody?.isDynamic = false
+              node.physicsBody?.friction = 0
+              node.physicsBody?.categoryBitMask =
+                PhysicsCategory.Choppable
+
+              node.position = obstaclesTileMap.centerOfTile(
+                atColumn: column, row: row)
+              obstaclesTileMap.addChild(node)
+          }
+       }
+  }
+  
   func setupWashableTilePhysics() {
     guard let washableTileMap = background else { return }
     // 1
@@ -344,8 +370,8 @@ func setupObstaclePhysics() {
               // 3
               let node = SKNode()
                 node.physicsBody = SKPhysicsBody(rectangleOf: tile.size)
-//              node.physicsBody?.isDynamic = false
-//              node.physicsBody?.friction = 0
+                node.physicsBody?.isDynamic = false
+                node.physicsBody?.friction = 0
                 node.physicsBody?.categoryBitMask =
                 PhysicsCategory.Washable
 
@@ -480,12 +506,13 @@ func setupObstaclePhysics() {
   
   override func update(_ currentTime: TimeInterval) {
     
+    var elapsedTime = currentTime
+    
     if gameState != .play {
       isPaused = true
       return
     }
   
-    
     if !player.hasBugspray{
       updateBugspray()
     }
@@ -494,6 +521,19 @@ func setupObstaclePhysics() {
       updateFireElement()
     }
     
+    if player.hasThunderElement && player.hasWaterElement && player.hasGrassElement && player.hasFireElement && player.hasRockElement && player.hasBugspray && megaBugCount > 0 {
+
+      player.hasFireElement = false
+      player.hasWaterElement = false
+      player.hasGrassElement = false
+      player.hasRockElement = false
+      player.hasThunderElement = false
+      player.hasEveryElement = true
+    }
+    
+    
+    
+   
     
     advanceBreakableTile(locatedAt: player.position)
     advanceChoppableTile(locatedAt: player.position)
@@ -525,7 +565,7 @@ extension GameScene: SKPhysicsContactDelegate{
       }
       
     case PhysicsCategory.Firebug:
-      if player.hasBugspray && player.hasFireElement {
+      if player.hasBugspray && player.hasFireElement || player.hasEveryElement {
         if let firebug = other.node as? Firebug {
           remove(bug: firebug)
           player.hasBugspray = false
@@ -536,39 +576,39 @@ extension GameScene: SKPhysicsContactDelegate{
     case PhysicsCategory.Breakable:
       if let obstacleNode = other.node {
         advanceBreakableTile(locatedAt: obstacleNode.position)
+        
+        obstacleNode.removeFromParent()
+        
+        if rockBugCount > 0 &&  player.hasBugspray && !player.hasRockElement || megaBugCount > 0 && player.hasBugspray && !player.hasRockElement  {
+          player.hasRockElement = true
+        }
+        
+      }
+    case PhysicsCategory.Choppable:
+      if let obstacleNode = other.node{
         advanceChoppableTile(locatedAt: obstacleNode.position)
         obstacleNode.removeFromParent()
         
-        if rockBugCount > 0 &&  player.hasBugspray {
-          player.hasRockElement = true
-        }
-        if grassBugCount > 0  && player.hasBugspray {
+        if grassBugCount > 0  && player.hasBugspray && !player.hasGrassElement || megaBugCount > 0 && player.hasBugspray && !player.hasGrassElement {
           player.hasGrassElement = true
           
         }
-        
-        if thunderBugCount > 0  && player.hasBugspray {
-          player.hasThunderElement = true
-          
-        }
-      
       }
     case PhysicsCategory.Washable:
         if other.node != nil {
-          if player.hasBugspray && waterBugCount > 0  {
+          if player.hasBugspray && waterBugCount > 0 && !player.hasWaterElement || megaBugCount > 0 && player.hasBugspray && !player.hasWaterElement {
               player.hasWaterElement = true
               
           }
         }
     case PhysicsCategory.Zappable:
       if other.node != nil {
-        if player.hasBugspray && thunderBugCount > 0 {
+        if player.hasBugspray && thunderBugCount > 0 && !player.hasThunderElement || megaBugCount > 0 && player.hasBugspray && !player.hasThunderElement {
           player.hasThunderElement = true
-          
         }
       }
     case PhysicsCategory.Waterbug:
-      if player.hasBugspray && player.hasWaterElement {
+      if player.hasBugspray && player.hasWaterElement || player.hasEveryElement {
         if let waterbug = other.node as? Waterbug {
           remove(bug: waterbug)
           player.hasBugspray = false
@@ -577,7 +617,7 @@ extension GameScene: SKPhysicsContactDelegate{
         }
       }
     case PhysicsCategory.Grassbug:
-      if player.hasBugspray && player.hasEveryElement {
+      if player.hasBugspray && player.hasGrassElement || player.hasEveryElement {
         if let grassbug = other.node as? Grassbug {
           remove(bug: grassbug)
           player.hasBugspray = false
@@ -586,7 +626,7 @@ extension GameScene: SKPhysicsContactDelegate{
         }
       }
     case PhysicsCategory.Rockbug:
-      if player.hasBugspray && player.hasRockElement {
+      if player.hasBugspray && player.hasRockElement || player.hasEveryElement {
            if let rockbug = other.node as? Rockbug {
              remove(bug: rockbug)
              player.hasBugspray = false
@@ -595,7 +635,7 @@ extension GameScene: SKPhysicsContactDelegate{
              }
            }
     case PhysicsCategory.Thunderbug:
-      if player.hasBugspray && player.hasThunderElement {
+      if player.hasBugspray && player.hasThunderElement || player.hasEveryElement {
         if let thunderbug = other.node as? Thunderbug {
           remove(bug: thunderbug)
           player.hasBugspray = false
@@ -609,11 +649,6 @@ extension GameScene: SKPhysicsContactDelegate{
             remove(bug: megabug)
             player.hasBugspray = false
             player.hasEveryElement = false
-            player.hasFireElement = false
-            player.hasWaterElement = false
-            player.hasGrassElement = false
-            player.hasRockElement = false
-            player.hasThunderElement = false
             megaBugCount -= 1
             }
           }

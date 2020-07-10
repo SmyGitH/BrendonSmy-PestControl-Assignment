@@ -49,13 +49,13 @@ class Player: SKSpriteNode {
   
   var hasThunderElement: Bool = false {
     didSet {
-      blink(color: .yellow, on: hasThunderElement)
+      blink(color: .orange, on: hasThunderElement)
     }
   }
   
   var hasEveryElement: Bool = false {
     didSet {
-      blink(color: .white, on: hasEveryElement)
+      megaForm(on: hasEveryElement)
     }
   }
   
@@ -72,6 +72,28 @@ class Player: SKSpriteNode {
     if hasFireElement {
       removeAction(forKey: "blink")
       blink(color: .red, on: hasFireElement)
+    }
+    
+    if hasWaterElement {
+      removeAction(forKey: "blink")
+      blink(color: .blue, on: hasWaterElement)
+    }
+    
+    if hasThunderElement {
+      removeAction(forKey: "blink")
+      blink(color: .orange, on: hasThunderElement)
+    }
+    if hasRockElement {
+      removeAction(forKey: "blink")
+      blink(color: .darkGray, on: hasRockElement)
+    }
+    if hasGrassElement{
+      removeAction(forKey: "blink")
+      blink(color: .green, on: hasGrassElement)
+    }
+    if hasEveryElement{
+      removeAction(forKey: "mega")
+      megaForm(on: hasEveryElement)
     }
   }
   
@@ -131,16 +153,37 @@ class Player: SKSpriteNode {
       let blinkOn = SKAction.colorize(with: color, colorBlendFactor: 1.0, duration: 0.2)
       let blink = SKAction.repeatForever(SKAction.sequence([blinkOn, blinkOff]))
       
-      xScale = xScale < 0 ? -1.5: 1.5
-      yScale = 1.5
+      
       run(blink, withKey: "blink")
     }else{
-      xScale = xScale < 0 ? -1.0 : 1.0
-      yScale = 1.0
+      
       removeAction(forKey: "blink")
       run(blinkOff)
     }
   }
+  
+  func megaForm(on: Bool){
+    let megaOff = SKAction.colorize(withColorBlendFactor: 0.0, duration: 0.2)
+       
+       if on {
+         let redOn = SKAction.colorize(with: .red, colorBlendFactor: 1.0, duration: 0.2)
+         let blueOn = SKAction.colorize(with: .blue, colorBlendFactor: 1.0, duration: 0.2)
+         let greenOn = SKAction.colorize(with: .green, colorBlendFactor: 1.0, duration: 0.2)
+         let darkGrayOn = SKAction.colorize(with: .darkGray, colorBlendFactor: 1.0, duration: 0.2)
+         let orangeOn = SKAction.colorize(with: .orange, colorBlendFactor: 1.0, duration: 0.2)
+         let mega = SKAction.repeatForever(SKAction.sequence([redOn,blueOn,greenOn,darkGrayOn,orangeOn]))
+         
+         xScale = xScale < 0 ? -1.5: 1.5
+         yScale = 1.5
+         run(mega, withKey: "mega")
+       }else{
+         xScale = xScale < 0 ? -1.0 : 1.0
+         yScale = 1.0
+         removeAction(forKey: "mega")
+         run(megaOff)
+       }
+  }
+  
   
   
   override func encode(with aCoder: NSCoder) {

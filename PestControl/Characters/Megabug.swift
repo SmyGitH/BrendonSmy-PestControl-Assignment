@@ -10,7 +10,7 @@ import Foundation
 
 import SpriteKit
 
-class Windbug: Bug {
+class Megabug: Bug {
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -18,9 +18,9 @@ class Windbug: Bug {
   
   override init() {
     super.init()
-    name = "Windbug"
-    color = .cyan
+    name = "Megabug"
+    color = .white
     colorBlendFactor = 1
-    physicsBody?.categoryBitMask = PhysicsCategory.Windbug
+    physicsBody?.categoryBitMask = PhysicsCategory.Megabug
   }
 }

@@ -15,6 +15,7 @@ enum PlayerSettings {
 class Player: SKSpriteNode {
   
   var animations: [SKAction] = []
+
   
   var hasBugspray: Bool = false{
     didSet {
@@ -52,9 +53,9 @@ class Player: SKSpriteNode {
     }
   }
   
-  var hasWindElement: Bool = false {
+  var hasEveryElement: Bool = false {
     didSet {
-      blink(color: .cyan, on: hasWindElement)
+      blink(color: .white, on: hasEveryElement)
     }
   }
   
@@ -140,6 +141,7 @@ class Player: SKSpriteNode {
       run(blinkOff)
     }
   }
+  
   
   override func encode(with aCoder: NSCoder) {
     aCoder.encode(hasBugspray, forKey: "Player.hasBugspray")

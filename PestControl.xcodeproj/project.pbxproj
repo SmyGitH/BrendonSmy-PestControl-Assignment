@@ -23,7 +23,7 @@
 		45AAA18424B54164001D7C6E /* Grassbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18324B54164001D7C6E /* Grassbug.swift */; };
 		45AAA18624B54173001D7C6E /* Rockbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18524B54173001D7C6E /* Rockbug.swift */; };
 		45AAA18824B54183001D7C6E /* Thunderbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18724B54183001D7C6E /* Thunderbug.swift */; };
-		45AAA18A24B54196001D7C6E /* Windbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18924B54196001D7C6E /* Windbug.swift */; };
+		45AAA18A24B54196001D7C6E /* Megabug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18924B54196001D7C6E /* Megabug.swift */; };
 		45F8016224B52FE5007BA61C /* Waterbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F8016124B52FE5007BA61C /* Waterbug.swift */; };
 		824441731D3C5E8F005ECB76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824441721D3C5E8F005ECB76 /* AppDelegate.swift */; };
 		824441751D3C5E8F005ECB76 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 824441741D3C5E8F005ECB76 /* GameScene.sks */; };
@@ -64,7 +64,7 @@
 		45AAA18324B54164001D7C6E /* Grassbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grassbug.swift; sourceTree = "<group>"; };
 		45AAA18524B54173001D7C6E /* Rockbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockbug.swift; sourceTree = "<group>"; };
 		45AAA18724B54183001D7C6E /* Thunderbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thunderbug.swift; sourceTree = "<group>"; };
-		45AAA18924B54196001D7C6E /* Windbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windbug.swift; sourceTree = "<group>"; };
+		45AAA18924B54196001D7C6E /* Megabug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Megabug.swift; sourceTree = "<group>"; };
 		45F8016124B52FE5007BA61C /* Waterbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waterbug.swift; sourceTree = "<group>"; };
 		8244416F1D3C5E8F005ECB76 /* PestControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PestControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824441721D3C5E8F005ECB76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				45AAA18324B54164001D7C6E /* Grassbug.swift */,
 				45AAA18524B54173001D7C6E /* Rockbug.swift */,
 				45AAA18724B54183001D7C6E /* Thunderbug.swift */,
-				45AAA18924B54196001D7C6E /* Windbug.swift */,
+				45AAA18924B54196001D7C6E /* Megabug.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 				82CCE3BA1F0B0A39009B67F9 /* SKNode+Extensions.swift in Sources */,
 				4556A43424A42A9400B73CB4 /* Bug.swift in Sources */,
 				4556A43024A41F1F00B73CB4 /* Animatable.swift in Sources */,
-				45AAA18A24B54196001D7C6E /* Windbug.swift in Sources */,
+				45AAA18A24B54196001D7C6E /* Megabug.swift in Sources */,
 				4556A43F24A6AB6A00B73CB4 /* HUD.swift in Sources */,
 				82CCE3BB1F0B0A39009B67F9 /* SKTAudio.swift in Sources */,
 				82CCE3B31F0B0A39009B67F9 /* CGFloat+Extensions.swift in Sources */,

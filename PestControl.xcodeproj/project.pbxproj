@@ -17,6 +17,13 @@
 		4556A43B24A6AB5000B73CB4 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4556A43A24A6AB5000B73CB4 /* Level2.sks */; };
 		4556A43D24A6AB5500B73CB4 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4556A43C24A6AB5500B73CB4 /* Level3.sks */; };
 		4556A43F24A6AB6A00B73CB4 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A43E24A6AB6A00B73CB4 /* HUD.swift */; };
+		455A631D24B6829700FF9D75 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 455A631C24B6829700FF9D75 /* Level4.sks */; };
+		455A631F24B6835C00FF9D75 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 455A631E24B6835C00FF9D75 /* Level5.sks */; };
+		455A632124B6837C00FF9D75 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 455A632024B6837C00FF9D75 /* Level6.sks */; };
+		45AAA18424B54164001D7C6E /* Grassbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18324B54164001D7C6E /* Grassbug.swift */; };
+		45AAA18624B54173001D7C6E /* Rockbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18524B54173001D7C6E /* Rockbug.swift */; };
+		45AAA18824B54183001D7C6E /* Thunderbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18724B54183001D7C6E /* Thunderbug.swift */; };
+		45AAA18A24B54196001D7C6E /* Windbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAA18924B54196001D7C6E /* Windbug.swift */; };
 		45F8016224B52FE5007BA61C /* Waterbug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F8016124B52FE5007BA61C /* Waterbug.swift */; };
 		824441731D3C5E8F005ECB76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824441721D3C5E8F005ECB76 /* AppDelegate.swift */; };
 		824441751D3C5E8F005ECB76 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 824441741D3C5E8F005ECB76 /* GameScene.sks */; };
@@ -51,6 +58,13 @@
 		4556A43A24A6AB5000B73CB4 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		4556A43C24A6AB5500B73CB4 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
 		4556A43E24A6AB6A00B73CB4 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		455A631C24B6829700FF9D75 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		455A631E24B6835C00FF9D75 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		455A632024B6837C00FF9D75 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
+		45AAA18324B54164001D7C6E /* Grassbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grassbug.swift; sourceTree = "<group>"; };
+		45AAA18524B54173001D7C6E /* Rockbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockbug.swift; sourceTree = "<group>"; };
+		45AAA18724B54183001D7C6E /* Thunderbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thunderbug.swift; sourceTree = "<group>"; };
+		45AAA18924B54196001D7C6E /* Windbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Windbug.swift; sourceTree = "<group>"; };
 		45F8016124B52FE5007BA61C /* Waterbug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waterbug.swift; sourceTree = "<group>"; };
 		8244416F1D3C5E8F005ECB76 /* PestControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PestControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824441721D3C5E8F005ECB76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +109,10 @@
 				4556A43324A42A9400B73CB4 /* Bug.swift */,
 				4556A43524A56C6700B73CB4 /* Firebug.swift */,
 				45F8016124B52FE5007BA61C /* Waterbug.swift */,
+				45AAA18324B54164001D7C6E /* Grassbug.swift */,
+				45AAA18524B54173001D7C6E /* Rockbug.swift */,
+				45AAA18724B54183001D7C6E /* Thunderbug.swift */,
+				45AAA18924B54196001D7C6E /* Windbug.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -107,6 +125,9 @@
 				4556A43824A6AB4B00B73CB4 /* Level1.sks */,
 				4556A43A24A6AB5000B73CB4 /* Level2.sks */,
 				4556A43C24A6AB5500B73CB4 /* Level3.sks */,
+				455A631C24B6829700FF9D75 /* Level4.sks */,
+				455A631E24B6835C00FF9D75 /* Level5.sks */,
+				455A632024B6837C00FF9D75 /* Level6.sks */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -238,9 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				825EF27F1F0B16A60091577D /* TileSets.sks in Resources */,
+				455A631D24B6829700FF9D75 /* Level4.sks in Resources */,
 				8244417E1D3C5E8F005ECB76 /* Main.storyboard in Resources */,
 				4556A43924A6AB4B00B73CB4 /* Level1.sks in Resources */,
+				455A631F24B6835C00FF9D75 /* Level5.sks in Resources */,
 				824441751D3C5E8F005ECB76 /* GameScene.sks in Resources */,
+				455A632124B6837C00FF9D75 /* Level6.sks in Resources */,
 				4556A43D24A6AB5500B73CB4 /* Level3.sks in Resources */,
 				824441801D3C5E8F005ECB76 /* Assets.xcassets in Resources */,
 				4556A43B24A6AB5000B73CB4 /* Level2.sks in Resources */,
@@ -260,11 +284,13 @@
 				82CCE3B41F0B0A39009B67F9 /* CGPoint+Extensions.swift in Sources */,
 				82CCE3BD1F0B0A39009B67F9 /* SKTTimingFunctions.swift in Sources */,
 				4556A42E24A41EA100B73CB4 /* Types.swift in Sources */,
+				45AAA18824B54183001D7C6E /* Thunderbug.swift in Sources */,
 				82CCE3BC1F0B0A39009B67F9 /* SKTEffects.swift in Sources */,
 				4556A42C24A4135700B73CB4 /* Player.swift in Sources */,
 				82CCE3B81F0B0A39009B67F9 /* SKAction+SpecialEffects.swift in Sources */,
 				4556A43224A428AD00B73CB4 /* Extensions.swift in Sources */,
 				82CCE3B51F0B0A39009B67F9 /* CGVector+Extensions.swift in Sources */,
+				45AAA18624B54173001D7C6E /* Rockbug.swift in Sources */,
 				82CCE3B71F0B0A39009B67F9 /* SKAction+Extensions.swift in Sources */,
 				82CCE3B91F0B0A39009B67F9 /* SKColor+Extensions.swift in Sources */,
 				8244417B1D3C5E8F005ECB76 /* GameViewController.swift in Sources */,
@@ -272,12 +298,14 @@
 				82CCE3BA1F0B0A39009B67F9 /* SKNode+Extensions.swift in Sources */,
 				4556A43424A42A9400B73CB4 /* Bug.swift in Sources */,
 				4556A43024A41F1F00B73CB4 /* Animatable.swift in Sources */,
+				45AAA18A24B54196001D7C6E /* Windbug.swift in Sources */,
 				4556A43F24A6AB6A00B73CB4 /* HUD.swift in Sources */,
 				82CCE3BB1F0B0A39009B67F9 /* SKTAudio.swift in Sources */,
 				82CCE3B31F0B0A39009B67F9 /* CGFloat+Extensions.swift in Sources */,
 				45F8016224B52FE5007BA61C /* Waterbug.swift in Sources */,
 				82CCE3BE1F0B0A39009B67F9 /* Vector3.swift in Sources */,
 				824441731D3C5E8F005ECB76 /* AppDelegate.swift in Sources */,
+				45AAA18424B54164001D7C6E /* Grassbug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

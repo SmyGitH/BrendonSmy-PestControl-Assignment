@@ -18,7 +18,43 @@ class Player: SKSpriteNode {
   
   var hasBugspray: Bool = false{
     didSet {
-      blink(color: .green, on: hasBugspray)
+      blink(color: .white, on: hasBugspray)
+    }
+  }
+  
+  var hasFireElement: Bool = false {
+    didSet {
+      blink(color: .red, on: hasFireElement)
+    }
+  }
+  
+  var hasWaterElement: Bool = false {
+    didSet {
+      blink(color: .blue, on: hasWaterElement)
+    }
+  }
+  
+  var hasRockElement: Bool = false {
+    didSet {
+      blink(color: .darkGray, on: hasRockElement)
+    }
+  }
+  
+  var hasGrassElement: Bool = false {
+    didSet {
+      blink(color: .green, on: hasGrassElement)
+    }
+  }
+  
+  var hasThunderElement: Bool = false {
+    didSet {
+      blink(color: .yellow, on: hasThunderElement)
+    }
+  }
+  
+  var hasWindElement: Bool = false {
+    didSet {
+      blink(color: .cyan, on: hasWindElement)
     }
   }
   
@@ -30,6 +66,11 @@ class Player: SKSpriteNode {
     if hasBugspray {
       removeAction(forKey: "blink")
       blink(color: .green, on: hasBugspray)
+    }
+    
+    if hasFireElement {
+      removeAction(forKey: "blink")
+      blink(color: .red, on: hasFireElement)
     }
   }
   

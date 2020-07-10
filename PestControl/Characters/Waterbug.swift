@@ -20,7 +20,7 @@ class Waterbug: Bug {
     super.init()
     name = "Waterbug"
     color = .blue
-    colorBlendFactor = 0.8
-    physicsBody?.categoryBitMask = PhysicsCategory.Firebug
+    colorBlendFactor = 1
+    physicsBody?.categoryBitMask = PhysicsCategory.Waterbug
   }
 }

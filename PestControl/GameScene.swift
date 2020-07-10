@@ -40,9 +40,17 @@ class GameScene: SKScene {
   
   var fireBugCount: Int = 0
   var normalBugCount : Int = 0
+  var waterBugCount : Int = 0
+  var grassBugCount: Int = 0
+  var rockBugCount: Int = 0
+  var thunderBugCount: Int = 0
+  var windBugCount: Int = 0
+  
+  
   
   
   var bugsprayTileMap: SKTileMapNode?
+  var fireElementTileMap: SKTileMapNode?
   
   var hud = HUD()
   var timeLimit: Int = 10
@@ -79,6 +87,7 @@ class GameScene: SKScene {
       hud = camera!.childNode(withName: "HUD") as! HUD
       bugsNode = childNode(withName: "Bugs")!
       bugsprayTileMap = childNode(withName: "Bugspray") as? SKTileMapNode
+      fireElementTileMap = childNode(withName: "Flame") as? SKTileMapNode
     }
     
     addObservers()
@@ -110,7 +119,7 @@ class GameScene: SKScene {
   func setupHud(){
     camera?.addChild(hud)
     hud.addTimer(time: timeLimit)
-    hud.addCounter(bug: fireBugCount + normalBugCount)
+    hud.addCounter(bug: fireBugCount + normalBugCount + waterBugCount + grassBugCount + rockBugCount + thunderBugCount + windBugCount)
   }
   
   func checkEndGame(){
@@ -124,15 +133,23 @@ class GameScene: SKScene {
   }
   
   override func didMove(to view: SKView){
+    //let totalBugCount = fireBugCount + waterBugCount + rockBugCount + thunderBugCount + grassBugCount + windBugCount
     if gameState == .initial{
       addChild(player)
       setupWorldPhysics()
       createBugs()
       setupObstaclePhysics()
       setupWashableTilePhysics()
-      if fireBugCount > 0 {
-        createBugspray(quantity: fireBugCount + 10)
+      
+      if normalBugCount > 0 {
+        createBugspray(quantity: normalBugCount)
       }
+      
+      if fireBugCount > 0 {
+        createFireElement(quantity: fireBugCount + 100)
+      }
+      
+    
       setupHud()
       gameState = .start
     }
@@ -226,6 +243,19 @@ class GameScene: SKScene {
           fireBugCount += 1
         }else if tile.userData?.object(forKey: "waterbug") != nil {
           bug = Waterbug()
+          waterBugCount += 1
+        }else if tile.userData?.object(forKey: "grassbug") != nil {
+          bug = Grassbug()
+          grassBugCount += 1
+        }else if tile.userData?.object(forKey: "rockbug") != nil {
+          bug = Rockbug()
+          rockBugCount += 1
+        }else if tile.userData?.object(forKey: "thunderbug") != nil {
+          bug = Thunderbug()
+          thunderBugCount += 1
+        }else if tile.userData?.object(forKey: "windbug") != nil {
+          bug = Windbug()
+          windBugCount += 1
         }else{
           bug = Bug()
           normalBugCount += 1
@@ -266,6 +296,7 @@ func setupObstaclePhysics() {
             }
          }
       }
+  
   func setupWashableTilePhysics() {
     guard let washableTileMap = background else { return }
     // 1
@@ -312,6 +343,30 @@ func setupObstaclePhysics() {
         obstaclesTileMap.setTileGroup(nextTileGroup, forColumn: column, row: row)
       }
   }
+  
+  func advanceChoppableTile(locatedAt nodePosition: CGPoint){
+    guard let obstaclesTileMap = obstaclesTileMap else {
+      return
+    }
+    let (column, row) = tileCoordinates(in: obstaclesTileMap, at: nodePosition)
+    
+    let obstacle = tile(in: obstaclesTileMap, at: (column, row))
+    
+    guard let nextTileGroupName = obstacle?.userData?.object(forKey: "choppable") as? String else{
+      return
+    }
+    if let nextTileGroup = tileGroupForName(tileSet: obstaclesTileMap.tileSet, name: nextTileGroupName) {
+        obstaclesTileMap.setTileGroup(nextTileGroup, forColumn: column, row: row)
+      }
+  }
+  
+  func tileCoordinates(in tileMap: SKTileMapNode, at position: CGPoint) -> TileCoordinates{
+    let column = tileMap.tileColumnIndex(fromPosition: position)
+    let row = tileMap.tileRowIndex(fromPosition: position)
+    
+    return (column, row)
+  }
+  
 
   func createBugspray(quantity: Int){
     let tile = SKTileDefinition(texture: SKTexture(pixelImageNamed: "bugspray"))
@@ -337,12 +392,7 @@ func setupObstaclePhysics() {
     addChild(bugsprayTileMap!)
   }
   
-  func tileCoordinates(in tileMap: SKTileMapNode, at position: CGPoint) -> TileCoordinates{
-    let column = tileMap.tileColumnIndex(fromPosition: position)
-    let row = tileMap.tileRowIndex(fromPosition: position)
-    
-    return (column, row)
-  }
+  
   
   func updateBugspray(){
     guard let bugsprayTileMap = bugsprayTileMap else {return}
@@ -351,6 +401,43 @@ func setupObstaclePhysics() {
     if tile(in: bugsprayTileMap, at: (column, row)) != nil {
       bugsprayTileMap.setTileGroup(nil, forColumn: column, row: row)
       player.hasBugspray = true
+      
+    }
+  }
+  
+  func createFireElement(quantity: Int){
+    let tile = SKTileDefinition(texture: SKTexture(pixelImageNamed: "flame"))
+    
+    let tilerule = SKTileGroupRule(adjacency: SKTileAdjacencyMask.adjacencyAll, tileDefinitions: [tile])
+    
+    let tilegroup = SKTileGroup(rules: [tilerule])
+    
+    let tileset = SKTileSet(tileGroups: [tilegroup])
+    
+    let columns = background.numberOfColumns
+    let rows = background.numberOfRows
+    fireElementTileMap = SKTileMapNode(tileSet: tileset, columns: columns, rows: rows, tileSize: tile.size)
+    
+    for _ in 1...quantity {
+      let column = Int.random(min: 0, max: columns - 1)
+      let row = Int.random(min: 0, max: rows - 1)
+      fireElementTileMap?.setTileGroup(tilegroup, forColumn: column, row: row)
+    }
+    
+    fireElementTileMap?.name = "Flame"
+    
+    addChild(fireElementTileMap!)
+  }
+  
+  
+  
+  func updateFireElement(){
+    guard let fireElementTileMap = fireElementTileMap else {return}
+    let (column, row) = tileCoordinates(in: fireElementTileMap, at: player.position)
+    
+    if tile(in: fireElementTileMap, at: (column, row)) != nil {
+      fireElementTileMap.setTileGroup(nil, forColumn: column, row: row)
+      player.hasFireElement = true
       
     }
   }
@@ -365,6 +452,10 @@ func setupObstaclePhysics() {
     
     if !player.hasBugspray{
       updateBugspray()
+    }
+    
+    if !player.hasFireElement{
+      updateFireElement()
     }
     
     advanceBreakableTile(locatedAt: player.position)
@@ -396,25 +487,77 @@ extension GameScene: SKPhysicsContactDelegate{
       }
       
     case PhysicsCategory.Firebug:
-      if player.hasBugspray {
+      if player.hasBugspray && player.hasFireElement {
         if let firebug = other.node as? Firebug {
           remove(bug: firebug)
           player.hasBugspray = false
+          player.hasFireElement = false
           fireBugCount -= 1
         }
       }
     case PhysicsCategory.Breakable:
       if let obstacleNode = other.node {
         advanceBreakableTile(locatedAt: obstacleNode.position)
+        advanceChoppableTile(locatedAt: obstacleNode.position)
         obstacleNode.removeFromParent()
+        
+        if rockBugCount > 0 {
+          player.hasRockElement = true
+        }
+        if grassBugCount > 0 {
+          player.hasGrassElement = true
+        }
+      
       }
     case PhysicsCategory.Washable:
         if other.node != nil {
-          if player.hasBugspray {
-              player.hasBugspray = false
+          if player.hasBugspray && waterBugCount > 0 {
+              player.hasWaterElement = true
           }
         }
-      
+    case PhysicsCategory.Waterbug:
+      if player.hasBugspray && player.hasWaterElement {
+        if let waterbug = other.node as? Waterbug {
+          remove(bug: waterbug)
+          player.hasBugspray = false
+          player.hasWaterElement = false
+          waterBugCount -= 1
+        }
+      }
+    case PhysicsCategory.Grassbug:
+      if player.hasBugspray && player.hasGrassElement {
+        if let grassbug = other.node as? Grassbug {
+          remove(bug: grassbug)
+          player.hasBugspray = false
+          player.hasGrassElement = false
+          grassBugCount -= 1
+        }
+      }
+    case PhysicsCategory.Rockbug:
+      if player.hasBugspray && player.hasRockElement {
+           if let rockbug = other.node as? Rockbug {
+             remove(bug: rockbug)
+             player.hasBugspray = false
+             player.hasRockElement = false
+             rockBugCount -= 1
+             }
+           }
+    case PhysicsCategory.Thunderbug:
+      if player.hasBugspray {
+        if let thunderbug = other.node as? Thunderbug {
+          remove(bug: thunderbug)
+          player.hasBugspray = false
+          thunderBugCount -= 1
+        }
+      }
+    case PhysicsCategory.Windbug:
+      if player.hasBugspray {
+          if let windbug = other.node as? Windbug {
+            remove(bug: windbug)
+            player.hasBugspray = false
+            windBugCount -= 1
+            }
+          }
     default:
       break
     }

@@ -506,7 +506,6 @@ func setupObstaclePhysics() {
   
   override func update(_ currentTime: TimeInterval) {
     
-    var elapsedTime = currentTime
     
     if gameState != .play {
       isPaused = true
@@ -530,10 +529,6 @@ func setupObstaclePhysics() {
       player.hasThunderElement = false
       player.hasEveryElement = true
     }
-    
-    
-    
-   
     
     advanceBreakableTile(locatedAt: player.position)
     advanceChoppableTile(locatedAt: player.position)

@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:trufun="http://trufun" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_n74K8cMLEeqjU4AAAAAAAA" name="model">
+  <eAnnotations xmi:id="_n75ZEcMLEeqjU4AAAAAAAA" source="Diagrams">
+    <contents xsi:type="trufun:TClassDiagram" xmi:id="_n75ZEsMLEeqjU4AAAAAAAA" id="_n75ZEMMLEeqjU4AAAAAAAA" owner="_n74K8cMLEeqjU4AAAAAAAA" name="main" zoom="1" gridSpacing="22,22">
+      <nodes xsi:type="trufun:TClassNode" xmi:id="_wMGUsMMLEeqjU4AAAAAAAA" owner="_wMD4cMMLEeqjU4AAAAAAAA" name="GameScene" incomingConnections="_gwYQwMMPEeqjU4AAAAAAAA" location="190,7" size="501,482" autoResize="true">
+        <fillColor xmi:id="_wMG7wMMLEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+        <lineColor xmi:id="_wMG7wcMLEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        <fontColor xmi:id="_wMG7wsMLEeqjU4AAAAAAAA"/>
+        <stereotypeNodes xmi:id="_wMG7w8MLEeqjU4AAAAAAAA" id="_wMD4cMMLEeqjU4AAAAAAAA"/>
+        <operationCompartmentNode xmi:id="_wMG7xMMLEeqjU4AAAAAAAA">
+          <operations xmi:id="_-Nz78MMLEeqjU4AAAAAAAA" owner="_-NyGwMMLEeqjU4AAAAAAAA" name="required init(coder Adecoder : NSCoder)"/>
+          <operations xmi:id="_rp-X4MMMEeqjU4AAAAAAAA" owner="_rp9JwMMMEeqjU4AAAAAAAA" name="transitionToScene(level : Int)"/>
+          <operations xmi:id="_4NrwEMMMEeqjU4AAAAAAAA" owner="_4Np64MMMEeqjU4AAAAAAAA" name="UpdateHUD(currentTime : TimeInterval)"/>
+          <operations xmi:id="_CmDSEMMNEeqjU4AAAAAAAA" owner="_CmCD8MMNEeqjU4AAAAAAAA" name="setupHud()"/>
+          <operations xmi:id="_EeI1EMMNEeqjU4AAAAAAAA" owner="_EeHm8MMNEeqjU4AAAAAAAA" name="checkEndGame()"/>
+          <operations xmi:id="_F-Yf0MMNEeqjU4AAAAAAAA" owner="_F-X4wMMNEeqjU4AAAAAAAA" name="didMove(to view : SKView)"/>
+          <operations xmi:id="_RD0jMMMNEeqjU4AAAAAAAA" owner="_RDzVEMMNEeqjU4AAAAAAAA" name="touchesBegan(touches : Set, with event : UIEvent?)"/>
+          <operations xmi:id="_dNPzIMMNEeqjU4AAAAAAAA" owner="_dNPMEMMNEeqjU4AAAAAAAA" name="setupCamera()"/>
+          <operations xmi:id="_ga73IMMNEeqjU4AAAAAAAA" owner="_ga7QEMMNEeqjU4AAAAAAAA" name="setupWorldPhysics()"/>
+          <operations xmi:id="_ibfZoMMNEeqjU4AAAAAAAA" owner="_ibeLgMMNEeqjU4AAAAAAAA" name="tile(in tileMap : SKTileMapNode, at coordinates : TileC) : SKTileDefinition"/>
+          <operations xmi:id="_Dl3T0MMOEeqjU4AAAAAAAA" owner="_Dl2FsMMOEeqjU4AAAAAAAA" name="createBugs()"/>
+          <operations xmi:id="_FWLa4MMOEeqjU4AAAAAAAA" owner="_FWKz0MMOEeqjU4AAAAAAAA" name="setupObstaclePhysics()"/>
+          <operations xmi:id="_Il6GQMMOEeqjU4AAAAAAAA" owner="_Il44IMMOEeqjU4AAAAAAAA" name="setupZapTilePhysics()"/>
+          <operations xmi:id="_K7gEoMMOEeqjU4AAAAAAAA" owner="_K7e2gMMOEeqjU4AAAAAAAA" name="setupChoppableTilePhysics()"/>
+          <operations xmi:id="_M0YR0MMOEeqjU4AAAAAAAA" owner="_M0XqwMMOEeqjU4AAAAAAAA" name="setupWashableTilePhysics()"/>
+          <operations xmi:id="_PLCAIMMOEeqjU4AAAAAAAA" owner="_PLAK8MMOEeqjU4AAAAAAAA" name="tileGroupForName(tileSet : SKTileSet, name : String) : SKTileGroup"/>
+          <operations xmi:id="_bIpBoMMOEeqjU4AAAAAAAA" owner="_bIoakMMOEeqjU4AAAAAAAA" name="advanceBreakableTile(locatedAt nodePosition : CGPoint)"/>
+          <operations xmi:id="_ho1YMMMOEeqjU4AAAAAAAA" owner="_ho0xIMMOEeqjU4AAAAAAAA" name="advanceChoppableTile(locatedAt nodePosition : CGPoint)"/>
+          <operations xmi:id="_6oEc8MMOEeqjU4AAAAAAAA" owner="_6oDO0MMOEeqjU4AAAAAAAA" name="tileCoordinates(in tileMap : SKTileMapNode, at position : CGPoint) : TileCoordinates"/>
+          <operations xmi:id="_FN0ToMMPEeqjU4AAAAAAAA" owner="_FNzskMMPEeqjU4AAAAAAAA" name="createBugSpray(quantity : Int)"/>
+          <operations xmi:id="_KCF68MMPEeqjU4AAAAAAAA" owner="_KCFT4MMPEeqjU4AAAAAAAA" name="updateBugSpray()"/>
+          <operations xmi:id="_Mgny4MMPEeqjU4AAAAAAAA" owner="_MgmkwMMPEeqjU4AAAAAAAA" name="createFireElement(quantity : Int)"/>
+          <operations xmi:id="_QtO9QMMPEeqjU4AAAAAAAA" owner="_QtNvIMMPEeqjU4AAAAAAAA" name="updateFireElement()"/>
+          <operations xmi:id="_SOJ9cMMPEeqjU4AAAAAAAA" owner="_SOIvUMMPEeqjU4AAAAAAAA" name="update(currentTime : TimeInterval)"/>
+        </operationCompartmentNode>
+        <attributeCompartmentNode xmi:id="_wMG7xcMLEeqjU4AAAAAAAA"/>
+        <nestedClassifierCompartmentNode xmi:id="_wMHi0MMLEeqjU4AAAAAAAA"/>
+        <templateParameterCompartmentNode xmi:id="_wMHi0cMLEeqjU4AAAAAAAA"/>
+      </nodes>
+      <nodes xsi:type="trufun:TClassNode" xmi:id="_cXRigMMPEeqjU4AAAAAAAA" owner="_cXQUYMMPEeqjU4AAAAAAAA" name="Extension GameScene" outgoingConnections="_gwYQwMMPEeqjU4AAAAAAAA" location="321,507" size="267,212" autoResize="true">
+        <fillColor xmi:id="_cXRigcMPEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+        <lineColor xmi:id="_cXRigsMPEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        <fontColor xmi:id="_cXRig8MPEeqjU4AAAAAAAA"/>
+        <stereotypeNodes xmi:id="_cXRihMMPEeqjU4AAAAAAAA" id="_cXQUYMMPEeqjU4AAAAAAAA"/>
+        <operationCompartmentNode xmi:id="_cXRihcMPEeqjU4AAAAAAAA">
+          <operations xmi:id="_2kUeMMMPEeqjU4AAAAAAAA" owner="_2kTQEMMPEeqjU4AAAAAAAA" name="remove(bug : bug)"/>
+          <operations xmi:id="_-qGSgMMPEeqjU4AAAAAAAA" owner="_-qFrcMMPEeqjU4AAAAAAAA" name="didBegin(contact : SKPhysicsContact)"/>
+          <operations xmi:id="_Go6jMMMQEeqjU4AAAAAAAA" owner="_Go5VEMMQEeqjU4AAAAAAAA" name="applicationDidBecomeActive()"/>
+          <operations xmi:id="_IkjJcMMQEeqjU4AAAAAAAA" owner="_IkiiYMMQEeqjU4AAAAAAAA" name="applicationWillResignActive()"/>
+          <operations xmi:id="_Kcs94MMQEeqjU4AAAAAAAA" owner="_KcrvwMMQEeqjU4AAAAAAAA" name="applicationDidEnterBackground()"/>
+          <operations xmi:id="_N35SYMMQEeqjU4AAAAAAAA" owner="_N34EQMMQEeqjU4AAAAAAAA" name="addObservers()"/>
+          <operations xmi:id="_PrvOkcMQEeqjU4AAAAAAAA" owner="_PrvOkMMQEeqjU4AAAAAAAA" name="saveGame()"/>
+          <operations xmi:id="_RpZ1IMMQEeqjU4AAAAAAAA" owner="_RpZOEMMQEeqjU4AAAAAAAA" name="loadGame()"/>
+          <operations xmi:id="_TK1ysMMQEeqjU4AAAAAAAA" owner="_TK1LoMMQEeqjU4AAAAAAAA" name="encode(with aCoder : NSCoder) : scene"/>
+        </operationCompartmentNode>
+        <attributeCompartmentNode xmi:id="_cXRihsMPEeqjU4AAAAAAAA"/>
+        <nestedClassifierCompartmentNode xmi:id="_cXRih8MPEeqjU4AAAAAAAA"/>
+        <templateParameterCompartmentNode xmi:id="_cXRiiMMPEeqjU4AAAAAAAA"/>
+      </nodes>
+      <nodes xsi:type="trufun:SubLabel" xmi:id="_gwjP4MMPEeqjU4AAAAAAAA" name="1" location="452,485" size="22,34" parent="_gwYQwMMPEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+        <fontColor xmi:id="_gwjP4cMPEeqjU4AAAAAAAA"/>
+      </nodes>
+      <nodes xsi:type="trufun:SubLabel" xmi:id="_gwj28MMPEeqjU4AAAAAAAA" name="1" location="452,473" size="22,34" parent="_gwYQwMMPEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+        <fontColor xmi:id="_gwj28cMPEeqjU4AAAAAAAA"/>
+      </nodes>
+      <connections xsi:type="trufun:TAssociationConnection" xmi:id="_gwYQwMMPEeqjU4AAAAAAAA" owner="_gwV0gMMPEeqjU4AAAAAAAA" name="" subLabels="_gwjP4MMPEeqjU4AAAAAAAA _gwj28MMPEeqjU4AAAAAAAA" target="_wMGUsMMLEeqjU4AAAAAAAA" source="_cXRigMMPEeqjU4AAAAAAAA">
+        <fillColor xmi:id="_gwYQwcMPEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        <lineColor xmi:id="_gwYQwsMPEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+      </connections>
+      <leftRuler xmi:id="_n75ZE8MLEeqjU4AAAAAAAA" unit="2"/>
+      <topRuler xmi:id="_n75ZFMMLEeqjU4AAAAAAAA" horizontal="true" unit="2"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xsi:type="uml:Class" xmi:id="_wMD4cMMLEeqjU4AAAAAAAA" name="GameScene">
+    <ownedAttribute xmi:id="_gwXCoMMPEeqjU4AAAAAAAA" name="" visibility="private" type="_cXQUYMMPEeqjU4AAAAAAAA" isUnique="false" association="_gwV0gMMPEeqjU4AAAAAAAA">
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_gwXpsMMPEeqjU4AAAAAAAA" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_gwXCocMPEeqjU4AAAAAAAA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_-NyGwMMLEeqjU4AAAAAAAA" name="required init" visibility="public">
+      <ownedParameter xmi:id="_jNPcIMMMEeqjU4AAAAAAAA" name="coder Adecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_jNPcIcMMEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_jNPcIsMMEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_jNPcI8MMEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_rp9JwMMMEeqjU4AAAAAAAA" name="transitionToScene" visibility="public">
+      <ownedParameter xmi:id="_0t52gMMMEeqjU4AAAAAAAA" name="level" type="_fYKoAMMMEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_0t52gcMMEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_0t52gsMMEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_0t52g8MMEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedTemplateSignature xmi:id="_3OkccMMMEeqjU4AAAAAAAA"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_4Np64MMMEeqjU4AAAAAAAA" name="UpdateHUD" visibility="public">
+      <ownedParameter xmi:id="_BTgFEMMNEeqjU4AAAAAAAA" name="currentTime" type="_BTe28MMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_BTgFEcMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_BTgFEsMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_BTgFE8MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_CmCD8MMNEeqjU4AAAAAAAA" name="setupHud" visibility="public"/>
+    <ownedOperation xmi:id="_EeHm8MMNEeqjU4AAAAAAAA" name="checkEndGame" visibility="public"/>
+    <ownedOperation xmi:id="_F-X4wMMNEeqjU4AAAAAAAA" name="didMove" visibility="private">
+      <ownedParameter xmi:id="_OL1pcMMNEeqjU4AAAAAAAA" name="to view" type="_OL0bUMMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_OL1pccMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_OL1pcsMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_OL1pc8MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_RDzVEMMNEeqjU4AAAAAAAA" name="touchesBegan" visibility="private">
+      <ownedParameter xmi:id="_aMhNEMMNEeqjU4AAAAAAAA" name="touches" type="_aMeJwMMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_aMhNEcMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_aMhNEsMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_aMhNE8MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_aMh0IMMNEeqjU4AAAAAAAA" name="with event" type="_aMgmAMMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_aMh0IcMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_aMh0IsMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_aMh0I8MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_dNPMEMMNEeqjU4AAAAAAAA" name="setupCamera" visibility="public"/>
+    <ownedOperation xmi:id="_ga7QEMMNEeqjU4AAAAAAAA" name="setupWorldPhysics" visibility="public"/>
+    <ownedOperation xmi:id="_ibeLgMMNEeqjU4AAAAAAAA" name="tile" visibility="public">
+      <ownedParameter xmi:id="_ye5y4MMNEeqjU4AAAAAAAA" name="in tileMap" type="_qSPTcMMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ye5y4cMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ye5y4sMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_ye5y48MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_ye6Z8MMNEeqjU4AAAAAAAA" name="at coordinates" type="_ye5L0MMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ye6Z8cMNEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ye6Z8sMNEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_ye6Z88MNEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_2Ir9AMMNEeqjU4AAAAAAAA" name="Parameter1" type="_2IrV8MMNEeqjU4AAAAAAAA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_Dl2FsMMOEeqjU4AAAAAAAA" name="createBugs" visibility="public"/>
+    <ownedOperation xmi:id="_FWKz0MMOEeqjU4AAAAAAAA" name="setupObstaclePhysics" visibility="public"/>
+    <ownedOperation xmi:id="_Il44IMMOEeqjU4AAAAAAAA" name="setupZapTilePhysics" visibility="public"/>
+    <ownedOperation xmi:id="_K7e2gMMOEeqjU4AAAAAAAA" name="setupChoppableTilePhysics" visibility="public"/>
+    <ownedOperation xmi:id="_M0XqwMMOEeqjU4AAAAAAAA" name="setupWashableTilePhysics" visibility="public"/>
+    <ownedOperation xmi:id="_PLAK8MMOEeqjU4AAAAAAAA" name="tileGroupForName" visibility="public">
+      <ownedParameter xmi:id="_YfvswMMOEeqjU4AAAAAAAA" name="tileSet" type="_YfspcMMOEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_YfvswcMOEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_YfvswsMOEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_Yfvsw8MOEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_YfvsxMMOEeqjU4AAAAAAAA" name="name" type="_YfvFsMMOEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_YfvsxcMOEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_YfvsxsMOEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_Yfvsx8MOEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_aRFukcMOEeqjU4AAAAAAAA" name="Parameter2" type="_aRFukMMOEeqjU4AAAAAAAA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_bIoakMMOEeqjU4AAAAAAAA" name="advanceBreakableTile" visibility="public">
+      <ownedParameter xmi:id="_g9FsgMMOEeqjU4AAAAAAAA" name="locatedAt nodePosition" type="_g9FFcMMOEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_g9FsgcMOEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_g9FsgsMOEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_g9Fsg8MOEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_ho0xIMMOEeqjU4AAAAAAAA" name="advanceChoppableTile" visibility="public">
+      <ownedParameter xmi:id="_nN4VIMMOEeqjU4AAAAAAAA" name="locatedAt nodePosition" type="_g9FFcMMOEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_nN4VIcMOEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_nN4VIsMOEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_nN4VI8MOEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_6oDO0MMOEeqjU4AAAAAAAA" name="tileCoordinates" visibility="public" isStatic="true">
+      <ownedParameter xmi:id="_BR1mQMMPEeqjU4AAAAAAAA" name="in tileMap" type="_qSPTcMMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_BR1mQcMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_BR1mQsMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_BR1mQ8MPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_BR2NUMMPEeqjU4AAAAAAAA" name="at position" type="_g9FFcMMOEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_BR2NUcMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_BR2NUsMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_BR2NU8MPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_C7tHEcMPEeqjU4AAAAAAAA" name="Parameter3" type="_C7tHEMMPEeqjU4AAAAAAAA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_FNzskMMPEeqjU4AAAAAAAA" name="createBugSpray" visibility="public">
+      <ownedParameter xmi:id="_IgxSIMMPEeqjU4AAAAAAAA" name="quantity" type="_fYKoAMMMEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_IgxSIcMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_IgxSIsMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_IgxSI8MPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_KCFT4MMPEeqjU4AAAAAAAA" name="updateBugSpray" visibility="public"/>
+    <ownedOperation xmi:id="_MgmkwMMPEeqjU4AAAAAAAA" name="createFireElement" visibility="public">
+      <ownedParameter xmi:id="_PqyBwMMPEeqjU4AAAAAAAA" name="quantity" type="_fYKoAMMMEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqyBwcMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_PqyBwsMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_PqyBw8MPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_QtNvIMMPEeqjU4AAAAAAAA" name="updateFireElement" visibility="public"/>
+    <ownedOperation xmi:id="_SOIvUMMPEeqjU4AAAAAAAA" name="update" visibility="private">
+      <ownedParameter xmi:id="_V1GO8MMPEeqjU4AAAAAAAA" name="currentTime" type="_BTe28MMNEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_V1GO8cMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_V1GO8sMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_V1G2AMMPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_Zv5_AMMMEeqjU4AAAAAAAA" name="Boolean"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_fYKoAMMMEeqjU4AAAAAAAA" name="Int"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_jNOOAMMMEeqjU4AAAAAAAA" name="NSCoder"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_BTe28MMNEeqjU4AAAAAAAA" name="TimeInterval"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_OL0bUMMNEeqjU4AAAAAAAA" name="SKView"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_aMeJwMMNEeqjU4AAAAAAAA" name="Set"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_aMgmAMMNEeqjU4AAAAAAAA" name="UIEvent?"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_qSPTcMMNEeqjU4AAAAAAAA" name="SKTileMapNode"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ye5L0MMNEeqjU4AAAAAAAA" name="TileC"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_2IrV8MMNEeqjU4AAAAAAAA" name="SKTileDefinition"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_YfspcMMOEeqjU4AAAAAAAA" name="SKTileSet"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_YfvFsMMOEeqjU4AAAAAAAA" name="String"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_aRFukMMOEeqjU4AAAAAAAA" name="SKTileGroup"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_g9FFcMMOEeqjU4AAAAAAAA" name="CGPoint"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_C7tHEMMPEeqjU4AAAAAAAA" name="TileCoordinates"/>
+  <packagedElement xsi:type="uml:Association" xmi:id="_babfwMMPEeqjU4AAAAAAAA"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_cXQUYMMPEeqjU4AAAAAAAA" name="Extension GameScene">
+    <ownedAttribute xmi:id="_gwV0gcMPEeqjU4AAAAAAAA" name="" visibility="private" type="_wMD4cMMLEeqjU4AAAAAAAA" isUnique="false" association="_gwV0gMMPEeqjU4AAAAAAAA">
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_gwWbkcMPEeqjU4AAAAAAAA" value="1"/>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_gwWbkMMPEeqjU4AAAAAAAA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_2kTQEMMPEeqjU4AAAAAAAA" name="remove" visibility="public">
+      <ownedParameter xmi:id="_9TMJ8MMPEeqjU4AAAAAAAA" name="bug" type="_9TK70MMPEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_9TMJ8cMPEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_9TMJ8sMPEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_9TMJ88MPEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_-qFrcMMPEeqjU4AAAAAAAA" name="didBegin" visibility="public">
+      <ownedParameter xmi:id="_Dh8LMMMQEeqjU4AAAAAAAA" name="contact" type="_Dh69EMMQEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dh8LMcMQEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_Dh8LMsMQEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_Dh8LM8MQEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_Go5VEMMQEeqjU4AAAAAAAA" name="applicationDidBecomeActive" visibility="public"/>
+    <ownedOperation xmi:id="_IkiiYMMQEeqjU4AAAAAAAA" name="applicationWillResignActive" visibility="public"/>
+    <ownedOperation xmi:id="_KcrvwMMQEeqjU4AAAAAAAA" name="applicationDidEnterBackground" visibility="public"/>
+    <ownedOperation xmi:id="_N34EQMMQEeqjU4AAAAAAAA" name="addObservers" visibility="public"/>
+    <ownedOperation xmi:id="_PrvOkMMQEeqjU4AAAAAAAA" name="saveGame" visibility="public"/>
+    <ownedOperation xmi:id="_RpZOEMMQEeqjU4AAAAAAAA" name="loadGame" visibility="public"/>
+    <ownedOperation xmi:id="_TK1LoMMQEeqjU4AAAAAAAA" name="encode" visibility="public">
+      <ownedParameter xmi:id="_WbWhMMMQEeqjU4AAAAAAAA" name="with aCoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_WbWhMcMQEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_WbWhMsMQEeqjU4AAAAAAAA" value="1"/>
+        <defaultValue xsi:type="uml:LiteralString" xmi:id="_WbWhM8MQEeqjU4AAAAAAAA" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_YzgrYMMQEeqjU4AAAAAAAA" name="Parameter4" type="_YzgEUMMQEeqjU4AAAAAAAA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_gwV0gMMPEeqjU4AAAAAAAA" memberEnd="_gwV0gcMPEeqjU4AAAAAAAA _gwXCoMMPEeqjU4AAAAAAAA"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_9TK70MMPEeqjU4AAAAAAAA" name="bug"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_Dh69EMMQEeqjU4AAAAAAAA" name="SKPhysicsContact"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_YzgEUMMQEeqjU4AAAAAAAA" name="scene"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_ku44QMMQEeqjU4AAAAAAAA" name="Class21"/>
+  <packagedElement xsi:type="uml:Package" xmi:id="_rlHwQMMQEeqjU4AAAAAAAA" name="SKUtils">
+    <eAnnotations xmi:id="_5zdeQcMQEeqjU4AAAAAAAA" source="Diagrams">
+      <contents xsi:type="trufun:TClassDiagram" xmi:id="_5zeFUMMQEeqjU4AAAAAAAA" id="_5zdeQMMQEeqjU4AAAAAAAA" owner="_rlHwQMMQEeqjU4AAAAAAAA" name="GameViewController" zoom="1" gridSpacing="22,22">
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_Bi8ScMMREeqjU4AAAAAAAA" owner="_Bi7rYMMREeqjU4AAAAAAAA" name="GameViewController" location="209,70" size="299,86" autoResize="true">
+          <fillColor xmi:id="_Bi8SccMREeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_Bi8ScsMREeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_Bi8Sc8MREeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_Bi8SdMMREeqjU4AAAAAAAA" id="_Bi7rYMMREeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_Bi85gMMREeqjU4AAAAAAAA">
+            <operations xmi:id="_F0Q9sMMREeqjU4AAAAAAAA" owner="_F0PvkMMREeqjU4AAAAAAAA" name="override viewDidLoad()"/>
+            <operations xmi:id="_KgIP4MMREeqjU4AAAAAAAA" owner="_KgHo0MMREeqjU4AAAAAAAA" name="override prefersStatusBarHidden(Bool : Boolean)"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_Bi85gcMREeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_Bi85gsMREeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_Bi85g8MREeqjU4AAAAAAAA"/>
+        </nodes>
+        <leftRuler xmi:id="_5zeFUcMQEeqjU4AAAAAAAA" unit="2"/>
+        <topRuler xmi:id="_5zeFUsMQEeqjU4AAAAAAAA" horizontal="true" unit="2"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xsi:type="uml:Class" xmi:id="_Bi7rYMMREeqjU4AAAAAAAA" name="GameViewController">
+      <ownedOperation xmi:id="_F0PvkMMREeqjU4AAAAAAAA" name="override viewDidLoad" visibility="public"/>
+      <ownedOperation xmi:id="_KgHo0MMREeqjU4AAAAAAAA" name="override prefersStatusBarHidden" visibility="public">
+        <ownedParameter xmi:id="_RFgocMMREeqjU4AAAAAAAA" name="Bool" type="_Zv5_AMMMEeqjU4AAAAAAAA">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_RFgoccMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_RFgocsMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_RFgoc8MREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Package" xmi:id="_Xquo8MMREeqjU4AAAAAAAA" name="Characters">
+    <eAnnotations xmi:id="_apPogMMREeqjU4AAAAAAAA" source="Diagrams">
+      <contents xsi:type="trufun:TClassDiagram" xmi:id="_apPogcMREeqjU4AAAAAAAA" id="_apPBcMMREeqjU4AAAAAAAA" owner="_Xquo8MMREeqjU4AAAAAAAA" name="Player" zoom="1" gridSpacing="22,22">
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_dN5WkMMREeqjU4AAAAAAAA" owner="_dN4vgMMREeqjU4AAAAAAAA" name="Player" outgoingConnections="_OtzUwMMSEeqjU4AAAAAAAA" location="207,58" size="256,176" autoResize="true">
+          <fillColor xmi:id="_dN5WkcMREeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_dN5WksMREeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_dN5Wk8MREeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_dN5WlMMREeqjU4AAAAAAAA" id="_dN4vgMMREeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_dN5WlcMREeqjU4AAAAAAAA">
+            <operations xmi:id="_i5g1kMMREeqjU4AAAAAAAA" owner="_i5fncMMREeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_pfPMYMMREeqjU4AAAAAAAA" owner="_pfN-QMMREeqjU4AAAAAAAA" name="Init()"/>
+            <operations xmi:id="_qqeQcMMREeqjU4AAAAAAAA" owner="_qqdpYMMREeqjU4AAAAAAAA" name="move(target : CGPoint)"/>
+            <operations xmi:id="_u9RiYMMREeqjU4AAAAAAAA" owner="_u9Q7UMMREeqjU4AAAAAAAA" name="checkDirection()"/>
+            <operations xmi:id="_wTfucMMREeqjU4AAAAAAAA" owner="_wTfHYMMREeqjU4AAAAAAAA" name="blink(color : SKColor, on : Boolean)"/>
+            <operations xmi:id="_2rpjUMMREeqjU4AAAAAAAA" owner="_2ro8QMMREeqjU4AAAAAAAA" name="megaForm(on : Boolean)"/>
+            <operations xmi:id="_54ddkMMREeqjU4AAAAAAAA" owner="_54c2gMMREeqjU4AAAAAAAA" name="override encode(with aCoder : NSCoder)"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_dN5WlsMREeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_dN59oMMREeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_dN59ocMREeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_EQMtcMMSEeqjU4AAAAAAAA" owner="_EQLfUMMSEeqjU4AAAAAAAA" name="Extension Player: Animatable" incomingConnections="_OtzUwMMSEeqjU4AAAAAAAA" location="226,281" size="221,31" autoResize="true">
+          <fillColor xmi:id="_EQMtccMSEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_EQMtcsMSEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_EQMtc8MSEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_EQMtdMMSEeqjU4AAAAAAAA" id="_EQLfUMMSEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_EQMtdcMSEeqjU4AAAAAAAA"/>
+          <attributeCompartmentNode xmi:id="_EQMtdsMSEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_EQMtd8MSEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_EQMteMMSEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_Ot7QkMMSEeqjU4AAAAAAAA" name="1" location="334,247" size="22,34" parent="_OtzUwMMSEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_Ot7QkcMSEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_Ot73oMMSEeqjU4AAAAAAAA" name="1" location="334,230" size="22,34" parent="_OtzUwMMSEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_Ot73ocMSEeqjU4AAAAAAAA"/>
+        </nodes>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_OtzUwMMSEeqjU4AAAAAAAA" owner="_Otw4gMMSEeqjU4AAAAAAAA" name="" subLabels="_Ot7QkMMSEeqjU4AAAAAAAA _Ot73oMMSEeqjU4AAAAAAAA" target="_EQMtcMMSEeqjU4AAAAAAAA" source="_dN5WkMMREeqjU4AAAAAAAA">
+          <fillColor xmi:id="_Otz70MMSEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_Otz70cMSEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <leftRuler xmi:id="_apPogsMREeqjU4AAAAAAAA" unit="2"/>
+        <topRuler xmi:id="_apPog8MREeqjU4AAAAAAAA" horizontal="true" unit="2"/>
+      </contents>
+      <contents xsi:type="trufun:TClassDiagram" xmi:id="_WA1dgcMSEeqjU4AAAAAAAA" id="_WA1dgMMSEeqjU4AAAAAAAA" owner="_Xquo8MMREeqjU4AAAAAAAA" name="Animatable" zoom="1" gridSpacing="22,22">
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_ZzyxwMMSEeqjU4AAAAAAAA" owner="_ZzxjoMMSEeqjU4AAAAAAAA" name="Extension Animatable" location="188,60" size="361,86" autoResize="true">
+          <fillColor xmi:id="_ZzyxwcMSEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_ZzyxwsMSEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_Zzyxw8MSEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_ZzyxxMMSEeqjU4AAAAAAAA" id="_ZzxjoMMSEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_ZzyxxcMSEeqjU4AAAAAAAA">
+            <operations xmi:id="_bu-FAMMSEeqjU4AAAAAAAA" owner="_bu824MMSEeqjU4AAAAAAAA" name="animationDirection(forDirectionVector : CGVector) : Direction"/>
+            <operations xmi:id="_mdxKAMMSEeqjU4AAAAAAAA" owner="_mdv74MMSEeqjU4AAAAAAAA" name="createAnimations(Characters : String)"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_ZzyxxsMSEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_Zzyxx8MSEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_ZzyxyMMSEeqjU4AAAAAAAA"/>
+        </nodes>
+        <leftRuler xmi:id="_WA1dgsMSEeqjU4AAAAAAAA" unit="2"/>
+        <topRuler xmi:id="_WA2EkMMSEeqjU4AAAAAAAA" horizontal="true" unit="2"/>
+      </contents>
+      <contents xsi:type="trufun:TClassDiagram" xmi:id="_s1GfgcMSEeqjU4AAAAAAAA" id="_s1GfgMMSEeqjU4AAAAAAAA" owner="_Xquo8MMREeqjU4AAAAAAAA" name="Bug" zoom="1" gridSpacing="22,22">
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_xtTkkMMSEeqjU4AAAAAAAA" owner="_xtS9gMMSEeqjU4AAAAAAAA" name="Bug" outgoingConnections="_ReNxcMMTEeqjU4AAAAAAAA" location="201,65" size="256,140" autoResize="true">
+          <fillColor xmi:id="_xtTkkcMSEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_xtTkksMSEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_xtTkk8MSEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_xtULoMMSEeqjU4AAAAAAAA" id="_xtS9gMMSEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_xtULocMSEeqjU4AAAAAAAA">
+            <operations xmi:id="_33--IMMSEeqjU4AAAAAAAA" owner="_339wAMMSEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_9Ss6YMMSEeqjU4AAAAAAAA" owner="_9SsTUMMSEeqjU4AAAAAAAA" name="init()"/>
+            <operations xmi:id="_AANpgMMTEeqjU4AAAAAAAA" owner="_AANCcMMTEeqjU4AAAAAAAA" name="@Objc moveBug()"/>
+            <operations xmi:id="_G9fksMMTEeqjU4AAAAAAAA" owner="_G9eWkMMTEeqjU4AAAAAAAA" name="die()"/>
+            <operations xmi:id="_ITOBgMMTEeqjU4AAAAAAAA" owner="_ITNacMMTEeqjU4AAAAAAAA" name="override encode(with aCoder : NSCoder)"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_xtULosMSEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_xtULo8MSEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_xtULpMMSEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_NE4ZsMMTEeqjU4AAAAAAAA" owner="_NE3yoMMTEeqjU4AAAAAAAA" name="Extension Bug: Animatable" incomingConnections="_ReNxcMMTEeqjU4AAAAAAAA" location="224,232" size="208,31" autoResize="true">
+          <fillColor xmi:id="_NE4ZscMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_NE4ZssMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_NE4Zs8MTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_NE4ZtMMTEeqjU4AAAAAAAA" id="_NE3yoMMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_NE4ZtcMTEeqjU4AAAAAAAA"/>
+          <attributeCompartmentNode xmi:id="_NE5AwMMTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_NE5AwcMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_NE5AwsMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_RebM0MMTEeqjU4AAAAAAAA" name="1" location="326,198" size="22,34" parent="_ReNxcMMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_RebM0cMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_Rebz4MMTEeqjU4AAAAAAAA" name="1" location="326,201" size="22,34" parent="_ReNxcMMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_Rebz4cMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_VjsZEMMTEeqjU4AAAAAAAA" owner="_VjryAMMTEeqjU4AAAAAAAA" name="Firebug" outgoingConnections="_5ZAPgMMTEeqjU4AAAAAAAA" location="92,289" size="270,86" autoResize="true">
+          <fillColor xmi:id="_VjsZEcMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_VjsZEsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_VjtAIMMTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_VjtAIcMTEeqjU4AAAAAAAA" id="_VjryAMMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_VjtAIsMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_eY8igMMTEeqjU4AAAAAAAA" owner="_eY7UYMMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_kKXHgcMTEeqjU4AAAAAAAA" owner="_kKXHgMMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_VjtAI8MTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_VjtAJMMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_VjtAJcMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_nzPSsMMTEeqjU4AAAAAAAA" owner="_nzOEkcMTEeqjU4AAAAAAAA" name="Waterbug" incomingConnections="_5ZAPgMMTEeqjU4AAAAAAAA" outgoingConnections="_59s4AMMTEeqjU4AAAAAAAA" location="92,389" size="270,86" autoResize="true">
+          <fillColor xmi:id="_nzP5wMMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_nzP5wcMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_nzP5wsMTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_nzP5w8MTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_nzP5xMMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_nzP5xcMTEeqjU4AAAAAAAA" owner="_nzNdgMMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_nzP5xsMTEeqjU4AAAAAAAA" owner="_nzOEkMMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_nzP5x8MTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_nzP5yMMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_nzP5ycMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_rJSogMMTEeqjU4AAAAAAAA" owner="_rJRaYcMTEeqjU4AAAAAAAA" name="Grassbug" incomingConnections="_59s4AMMTEeqjU4AAAAAAAA" outgoingConnections="_6jynoMMTEeqjU4AAAAAAAA" location="90,490" size="270,86" autoResize="true">
+          <fillColor xmi:id="_rJSogcMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_rJSogsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_rJSog8MTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_rJSohMMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_rJSohcMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_rJSohsMTEeqjU4AAAAAAAA" owner="_rJQzVsMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_rJSoh8MTEeqjU4AAAAAAAA" owner="_rJRaYMMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_rJSoiMMTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_rJSoicMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_rJSoisMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_tWA-wMMTEeqjU4AAAAAAAA" owner="_tV_wosMTEeqjU4AAAAAAAA" name="RockBug" incomingConnections="_6jynoMMTEeqjU4AAAAAAAA" outgoingConnections="_7GXJMMMTEeqjU4AAAAAAAA" location="91,588" size="270,86" autoResize="true">
+          <fillColor xmi:id="_tWA-wcMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_tWA-wsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_tWA-w8MTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_tWA-xMMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_tWA-xcMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_tWA-xsMTEeqjU4AAAAAAAA" owner="_tV_woMMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_tWA-x8MTEeqjU4AAAAAAAA" owner="_tV_wocMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_tWA-yMMTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_tWA-ycMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_tWA-ysMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_w0MV0MMTEeqjU4AAAAAAAA" owner="_vamFosMTEeqjU4AAAAAAAA" name="Thunderbug" incomingConnections="_7GXJMMMTEeqjU4AAAAAAAA" outgoingConnections="_8Fyl4MMTEeqjU4AAAAAAAA" location="96,685" size="270,86" autoResize="true">
+          <fillColor xmi:id="_w0MV0cMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_w0MV0sMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_w0MV08MTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_w0MV1MMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_w0MV1cMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_w0MV1sMTEeqjU4AAAAAAAA" owner="_vamFoMMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_w0MV18MTEeqjU4AAAAAAAA" owner="_vamFocMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_w0MV2MMTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_w0MV2cMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_w0MV2sMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:TClassNode" xmi:id="_1umaUMMTEeqjU4AAAAAAAA" owner="_1F-UEsMTEeqjU4AAAAAAAA" name="Megabug" incomingConnections="_8Fyl4MMTEeqjU4AAAAAAAA" location="88,783" size="270,86" autoResize="true">
+          <fillColor xmi:id="_1umaUcMTEeqjU4AAAAAAAA" r="255" g="255" b="255"/>
+          <lineColor xmi:id="_1umaUsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <fontColor xmi:id="_1umaU8MTEeqjU4AAAAAAAA"/>
+          <stereotypeNodes xmi:id="_1umaVMMTEeqjU4AAAAAAAA"/>
+          <operationCompartmentNode xmi:id="_1umaVcMTEeqjU4AAAAAAAA">
+            <operations xmi:id="_1umaVsMTEeqjU4AAAAAAAA" owner="_1F-UEMMTEeqjU4AAAAAAAA" name="required init(coder aDecoder : NSCoder)"/>
+            <operations xmi:id="_1umaV8MTEeqjU4AAAAAAAA" owner="_1F-UEcMTEeqjU4AAAAAAAA" name="init()"/>
+          </operationCompartmentNode>
+          <attributeCompartmentNode xmi:id="_1umaWMMTEeqjU4AAAAAAAA"/>
+          <nestedClassifierCompartmentNode xmi:id="_1umaWcMTEeqjU4AAAAAAAA"/>
+          <templateParameterCompartmentNode xmi:id="_1umaWsMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_5ZKAgMMTEeqjU4AAAAAAAA" name="1" location="225,355" size="22,34" parent="_5ZAPgMMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_5ZKAgcMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_5ZKnkMMTEeqjU4AAAAAAAA" name="1" location="225,371" size="22,34" parent="_5ZAPgMMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_5ZKnkcMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_592pAMMTEeqjU4AAAAAAAA" name="1" location="224,456" size="22,34" parent="_59s4AMMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_593QEMMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_593QEcMTEeqjU4AAAAAAAA" name="1" location="224,471" size="22,34" parent="_59s4AMMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_593QEsMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_6j7xkMMTEeqjU4AAAAAAAA" name="1" location="223,554" size="22,34" parent="_6jynoMMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_6j7xkcMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_6j8YoMMTEeqjU4AAAAAAAA" name="1" location="223,572" size="22,34" parent="_6jynoMMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_6j8YocMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_7Gg6MMMTEeqjU4AAAAAAAA" name="1" location="226,651" size="22,34" parent="_7GXJMMMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_7Gg6McMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_7GhhQMMTEeqjU4AAAAAAAA" name="1" location="226,670" size="22,34" parent="_7GXJMMMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_7GhhQcMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_8F7v0MMTEeqjU4AAAAAAAA" name="1" location="225,749" size="22,34" parent="_8Fyl4MMTEeqjU4AAAAAAAA" alias="Client.Multiplicity" direction="12" offset="0,0">
+          <fontColor xmi:id="_8F8W4MMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <nodes xsi:type="trufun:SubLabel" xmi:id="_8F8W4cMTEeqjU4AAAAAAAA" name="1" location="225,767" size="22,34" parent="_8Fyl4MMTEeqjU4AAAAAAAA" alias="Supplier.Multiplicity" direction="11" offset="0,0">
+          <fontColor xmi:id="_8F8W4sMTEeqjU4AAAAAAAA"/>
+        </nodes>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_ReNxcMMTEeqjU4AAAAAAAA" owner="_ReLVMMMTEeqjU4AAAAAAAA" name="" subLabels="_RebM0MMTEeqjU4AAAAAAAA _Rebz4MMTEeqjU4AAAAAAAA" target="_NE4ZsMMTEeqjU4AAAAAAAA" source="_xtTkkMMSEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_ReNxccMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_ReNxcsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_5ZAPgMMTEeqjU4AAAAAAAA" owner="_5Y9zQMMTEeqjU4AAAAAAAA" name="" subLabels="_5ZKAgMMTEeqjU4AAAAAAAA _5ZKnkMMTEeqjU4AAAAAAAA" target="_nzPSsMMTEeqjU4AAAAAAAA" source="_VjsZEMMTEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_5ZAPgcMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_5ZAPgsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_59s4AMMTEeqjU4AAAAAAAA" owner="_59qbwMMTEeqjU4AAAAAAAA" name="" subLabels="_592pAMMTEeqjU4AAAAAAAA _593QEcMTEeqjU4AAAAAAAA" target="_rJSogMMTEeqjU4AAAAAAAA" source="_nzPSsMMTEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_59s4AcMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_59s4AsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_6jynoMMTEeqjU4AAAAAAAA" owner="_6jwLYMMTEeqjU4AAAAAAAA" name="" subLabels="_6j7xkMMTEeqjU4AAAAAAAA _6j8YoMMTEeqjU4AAAAAAAA" target="_tWA-wMMTEeqjU4AAAAAAAA" source="_rJSogMMTEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_6jynocMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_6jynosMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_7GXJMMMTEeqjU4AAAAAAAA" owner="_7GUs8MMTEeqjU4AAAAAAAA" name="" subLabels="_7Gg6MMMTEeqjU4AAAAAAAA _7GhhQMMTEeqjU4AAAAAAAA" target="_w0MV0MMTEeqjU4AAAAAAAA" source="_tWA-wMMTEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_7GXJMcMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_7GXJMsMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <connections xsi:type="trufun:TAssociationConnection" xmi:id="_8Fyl4MMTEeqjU4AAAAAAAA" owner="_8FwJoMMTEeqjU4AAAAAAAA" name="" subLabels="_8F7v0MMTEeqjU4AAAAAAAA _8F8W4cMTEeqjU4AAAAAAAA" target="_1umaUMMTEeqjU4AAAAAAAA" source="_w0MV0MMTEeqjU4AAAAAAAA">
+          <fillColor xmi:id="_8Fyl4cMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+          <lineColor xmi:id="_8Fyl4sMTEeqjU4AAAAAAAA" r="30" g="30" b="30"/>
+        </connections>
+        <leftRuler xmi:id="_s1GfgsMSEeqjU4AAAAAAAA" unit="2"/>
+        <topRuler xmi:id="_s1Gfg8MSEeqjU4AAAAAAAA" horizontal="true" unit="2"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xsi:type="uml:Class" xmi:id="_dN4vgMMREeqjU4AAAAAAAA" name="Player">
+      <ownedAttribute xmi:id="_OtxfkMMSEeqjU4AAAAAAAA" name="" visibility="private" type="_EQLfUMMSEeqjU4AAAAAAAA" isUnique="false" association="_Otw4gMMSEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_OtyGocMSEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_OtyGoMMSEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_i5fncMMREeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_oLr50MMREeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_oLr50cMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_oLr50sMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_oLr508MREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_pfN-QMMREeqjU4AAAAAAAA" name="Init" visibility="public"/>
+      <ownedOperation xmi:id="_qqdpYMMREeqjU4AAAAAAAA" name="move" visibility="public">
+        <ownedParameter xmi:id="_uPtRwMMREeqjU4AAAAAAAA" name="target" type="_g9FFcMMOEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_uPtRwcMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_uPtRwsMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_uPtRw8MREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u9Q7UMMREeqjU4AAAAAAAA" name="checkDirection" visibility="public"/>
+      <ownedOperation xmi:id="_wTfHYMMREeqjU4AAAAAAAA" name="blink" visibility="public">
+        <ownedParameter xmi:id="_04_58MMREeqjU4AAAAAAAA" name="color" type="_047ogMMREeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_05AhAMMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_05AhAcMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_05AhAsMREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_05AhA8MREeqjU4AAAAAAAA" name="on" type="_Zv5_AMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_05AhBMMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_05AhBcMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_05AhBsMREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2ro8QMMREeqjU4AAAAAAAA" name="megaForm" visibility="public">
+        <ownedParameter xmi:id="_5L8V0MMREeqjU4AAAAAAAA" name="on" type="_Zv5_AMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5L8V0cMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5L8V0sMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_5L8V08MREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_54c2gMMREeqjU4AAAAAAAA" name="override encode" visibility="public">
+        <ownedParameter xmi:id="__1CJsMMREeqjU4AAAAAAAA" name="with aCoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="__1CJscMREeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="__1CJssMREeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="__1CJs8MREeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_EQLfUMMSEeqjU4AAAAAAAA" name="Extension Player: Animatable">
+      <ownedAttribute xmi:id="_OtyGosMSEeqjU4AAAAAAAA" name="" visibility="private" type="_dN4vgMMREeqjU4AAAAAAAA" isUnique="false" association="_Otw4gMMSEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_OtytscMSEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_OtytsMMSEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_Otw4gMMSEeqjU4AAAAAAAA" memberEnd="_OtxfkMMSEeqjU4AAAAAAAA _OtyGosMSEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Class" xmi:id="_ZzxjoMMSEeqjU4AAAAAAAA" name="Extension Animatable">
+      <ownedOperation xmi:id="_bu824MMSEeqjU4AAAAAAAA" name="animationDirection" visibility="public">
+        <ownedParameter xmi:id="_hoCKIMMSEeqjU4AAAAAAAA" name="forDirectionVector" type="_hoBjEMMSEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_hoCKIcMSEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_hoCKIsMSEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_hoCKI8MSEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_j-qqUMMSEeqjU4AAAAAAAA" name="Parameter5" type="_j-qDQMMSEeqjU4AAAAAAAA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_mdv74MMSEeqjU4AAAAAAAA" name="createAnimations" visibility="public">
+        <ownedParameter xmi:id="_q3_5oMMSEeqjU4AAAAAAAA" name="Characters" type="_YfvFsMMOEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_q3_5ocMSEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_q3_5osMSEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_q3_5o8MSEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_xtS9gMMSEeqjU4AAAAAAAA" name="Bug">
+      <ownedAttribute xmi:id="_ReL8QMMTEeqjU4AAAAAAAA" name="" visibility="private" type="_NE3yoMMTEeqjU4AAAAAAAA" isUnique="false" association="_ReLVMMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ReMjUcMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ReMjUMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_339wAMMSEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_86kuQMMSEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_86kuQcMSEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_86kuQsMSEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_86kuQ8MSEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_9SsTUMMSEeqjU4AAAAAAAA" name="init" visibility="public"/>
+      <ownedOperation xmi:id="_AANCcMMTEeqjU4AAAAAAAA" name="@Objc moveBug" visibility="public"/>
+      <ownedOperation xmi:id="_G9eWkMMTEeqjU4AAAAAAAA" name="die" visibility="public"/>
+      <ownedOperation xmi:id="_ITNacMMTEeqjU4AAAAAAAA" name="override encode" visibility="public">
+        <ownedParameter xmi:id="_LzXugMMTEeqjU4AAAAAAAA" name="with aCoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_LzXugcMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_LzYVkMMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_LzYVkcMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_NE3yoMMTEeqjU4AAAAAAAA" name="Extension Bug: Animatable">
+      <ownedAttribute xmi:id="_ReMjUsMTEeqjU4AAAAAAAA" name="" visibility="private" type="_xtS9gMMSEeqjU4AAAAAAAA" isUnique="false" association="_ReLVMMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_ReNKYcMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_ReNKYMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_ReLVMMMTEeqjU4AAAAAAAA" memberEnd="_ReL8QMMTEeqjU4AAAAAAAA _ReMjUsMTEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Class" xmi:id="_VjryAMMTEeqjU4AAAAAAAA" name="Firebug">
+      <generalization xmi:id="_aDxSAMMTEeqjU4AAAAAAAA" general="_xtS9gMMSEeqjU4AAAAAAAA"/>
+      <ownedAttribute xmi:id="_5Y9zQcMTEeqjU4AAAAAAAA" name="" visibility="private" type="_nzOEkcMTEeqjU4AAAAAAAA" isUnique="false" association="_5Y9zQMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5Y-aUcMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5Y-aUMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_eY7UYMMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_jqoekMMTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_jqoekcMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_jqoeksMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_jqoek8MTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_kKXHgMMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_nzOEkcMTEeqjU4AAAAAAAA" name="Waterbug">
+      <ownedAttribute xmi:id="_5Y-aUsMTEeqjU4AAAAAAAA" name="" visibility="private" type="_VjryAMMTEeqjU4AAAAAAAA" isUnique="false" association="_5Y9zQMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5Y_BYcMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5Y_BYMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_59rC0MMTEeqjU4AAAAAAAA" name="" visibility="private" type="_rJRaYcMTEeqjU4AAAAAAAA" isUnique="false" association="_59qbwMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_59rC0sMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_59rC0cMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_nzNdgMMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_nzLBQ8MTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_nzLBRMMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_nzLBRcMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_nzLoUMMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_nzOEkMMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_rJRaYcMTEeqjU4AAAAAAAA" name="Grassbug">
+      <ownedAttribute xmi:id="_59rp4MMTEeqjU4AAAAAAAA" name="" visibility="private" type="_nzOEkcMTEeqjU4AAAAAAAA" isUnique="false" association="_59qbwMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_59sQ8MMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_59rp4cMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_6jwLYcMTEeqjU4AAAAAAAA" name="" visibility="private" type="_tV_wosMTEeqjU4AAAAAAAA" isUnique="false" association="_6jwLYMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_6jwyccMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_6jwycMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_rJQzVsMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_rJQzUcMTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_rJQzUsMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_rJQzU8MTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_rJQzVMMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rJRaYMMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_tV_wosMTEeqjU4AAAAAAAA" name="RockBug">
+      <ownedAttribute xmi:id="_6jxZgMMTEeqjU4AAAAAAAA" name="" visibility="private" type="_rJRaYcMTEeqjU4AAAAAAAA" isUnique="false" association="_6jwLYMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_6jxZgsMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_6jxZgcMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_7GUs8cMTEeqjU4AAAAAAAA" name="" visibility="private" type="_vamFosMTEeqjU4AAAAAAAA" isUnique="false" association="_7GUs8MMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_7GVUAcMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_7GVUAMMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_tV_woMMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_tV_JksMTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_tV_Jk8MTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_tV_JlMMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_tV_JlcMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_tV_wocMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_vamFosMTEeqjU4AAAAAAAA" name="Thunderbug">
+      <ownedAttribute xmi:id="_7GV7EMMTEeqjU4AAAAAAAA" name="" visibility="private" type="_tV_wosMTEeqjU4AAAAAAAA" isUnique="false" association="_7GUs8MMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_7GV7EsMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_7GV7EcMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_8FwwsMMTEeqjU4AAAAAAAA" name="" visibility="private" type="_1F-UEsMTEeqjU4AAAAAAAA" isUnique="false" association="_8FwJoMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_8FxXwMMTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_8FwwscMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_vamFoMMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_vak3g8MTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_vak3hMMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_vak3hcMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_vak3hsMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vamFocMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_1F-UEsMTEeqjU4AAAAAAAA" name="Megabug">
+      <ownedAttribute xmi:id="_8FxXwcMTEeqjU4AAAAAAAA" name="" visibility="private" type="_vamFosMTEeqjU4AAAAAAAA" isUnique="false" association="_8FwJoMMTEeqjU4AAAAAAAA">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_8FxXw8MTEeqjU4AAAAAAAA" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_8FxXwsMTEeqjU4AAAAAAAA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_1F-UEMMTEeqjU4AAAAAAAA" name="required init" visibility="public">
+        <ownedParameter xmi:id="_1F9F88MTEeqjU4AAAAAAAA" name="coder aDecoder" type="_jNOOAMMMEeqjU4AAAAAAAA" isUnique="false">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_1F9F9MMTEeqjU4AAAAAAAA" value="1"/>
+          <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_1F9F9cMTEeqjU4AAAAAAAA" value="1"/>
+          <defaultValue xsi:type="uml:LiteralString" xmi:id="_1F9F9sMTEeqjU4AAAAAAAA" value=""/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1F-UEcMTEeqjU4AAAAAAAA" name="init" visibility="public"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5Y9zQMMTEeqjU4AAAAAAAA" memberEnd="_5Y9zQcMTEeqjU4AAAAAAAA _5Y-aUsMTEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Association" xmi:id="_59qbwMMTEeqjU4AAAAAAAA" memberEnd="_59rC0MMTEeqjU4AAAAAAAA _59rp4MMTEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Association" xmi:id="_6jwLYMMTEeqjU4AAAAAAAA" memberEnd="_6jwLYcMTEeqjU4AAAAAAAA _6jxZgMMTEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Association" xmi:id="_7GUs8MMTEeqjU4AAAAAAAA" memberEnd="_7GUs8cMTEeqjU4AAAAAAAA _7GV7EMMTEeqjU4AAAAAAAA"/>
+    <packagedElement xsi:type="uml:Association" xmi:id="_8FwJoMMTEeqjU4AAAAAAAA" memberEnd="_8FwwsMMTEeqjU4AAAAAAAA _8FxXwcMTEeqjU4AAAAAAAA"/>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_047ogMMREeqjU4AAAAAAAA" name="SKColor"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_hoBjEMMSEeqjU4AAAAAAAA" name="CGVector"/>
+  <packagedElement xsi:type="uml:Class" xmi:id="_j-qDQMMSEeqjU4AAAAAAAA" name="Direction"/>
+</uml:Model>
